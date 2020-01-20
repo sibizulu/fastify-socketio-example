@@ -7,6 +7,8 @@
         "start": "nodemon index.js"
     },
     "dependencies": {
-        "fastify": "^2.11.0"
+        "@guivic/fastify-socket.io": "^0.1.1",
+        "fastify": "^2.11.0",
+        "socket.io": "^2.3.0"
     }
 }

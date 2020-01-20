@@ -3,6 +3,7 @@ const fastify = require('fastify')({
 })
 
 fastify.register(require('./routes'))
+fastify.register(require('@guivic/fastify-socket.io'))
 
 const start = async () => {
     try {
