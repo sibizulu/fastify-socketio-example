@@ -9,8 +9,18 @@
         <script>
             var socket = io('http://localhost:3000')
             socket.on('message', function(msg) {
-                console.log(msg)
+                addMessage(msg)
             })
+            function addMessage(message) {
+                var text = document.createTextNode(message),
+                    el = document.createElement('li'),
+                    messages = document.getElementById('messages')
+
+                el.appendChild(text)
+                messages.appendChild(el)
+            }
         </script>
+
+        <ol id="messages"></ol>
     </body>
 </html>
